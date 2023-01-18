@@ -1,0 +1,119 @@
+$orange: hsl(31, 77%, 52%);
+$d-cyan: hsl(184, 100%, 22%);
+$vd-cyan: hsl(179, 100%, 13%);
+$paragraphs: hsla(0, 0%, 100%, 0.75);
+$bg: hsl(0, 0%, 95%);
+
+$font1: 'Lexend Deca', sans-serif;
+$font2: 'Big Shoulders Display', cursive;
+
+@mixin font-regular($font_size) {
+  font-family: $font1;
+  font-weight: 400;
+  font-size: $font_size;
+}
+@mixin font-bold($font_size) {
+  font-family: $font2;
+  font-weight: 700;
+  font-size: $font_size;
+}
+
+html {
+  font-size: 15px;
+
+body {
+  margin: 2rem;
+  min-width: auto;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+}
+h2 {
+  color: #fff;
+  @include font-bold(3rem);
+  text-transform: uppercase;
+}
+p {
+  color: $paragraphs;
+  @include font-regular(1rem);
+  margin-bottom: 5rem;
+  padding-right: 5rem;
+}
+.car-image {
+  width: 70px;
+  height: 45px;
+}
+
+.btn {
+  @include font-regular(1rem);
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.btn-light:hover {
+  background: transparent;
+  color: #fff;
+}
+.btn-light span:hover {
+  color: #fff;
+}
+
+.container {
+  box-sizing: border-box;
+  border-radius: 0;
+  
+  .card {
+    min-height: 450px;
+    min-width: 300px;
+    box-sizing: border-box;
+    border-radius: 0;
+  }
+  .card-1 {
+    background: $orange;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    .btn-1 {
+      color: $orange;
+      align-self: start;
+    }
+  }
+  .card-2 {
+    background: $d-cyan;
+    .btn-2 {
+      color: $d-cyan;
+      align-self: start;
+    }
+  }
+  .card-3 {
+    background: $vd-cyan;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    .btn-3 {
+      color: $vd-cyan;
+      display: inline;
+      align-self: start;
+    }
+  }
+ 
+}
+
+@media only screen and (max-width: 768px) {
+  .container .card-1, .container .card-2, .container .card-3 {
+    border-radius: 0;
+  }
+  .container .card-1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .container .card-3 {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+}

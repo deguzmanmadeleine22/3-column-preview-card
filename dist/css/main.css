@@ -1,0 +1,84 @@
+html {
+  font-size: 15px; }
+  html body {
+    margin: 2rem;
+    min-width: auto;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column; }
+
+h2 {
+  color: #fff;
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: uppercase; }
+
+p {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 5rem;
+  padding-right: 5rem; }
+
+.car-image {
+  width: 70px;
+  height: 45px; }
+
+.btn {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  border-radius: 20px;
+  display: inline-block; }
+
+.btn-light:hover {
+  background: transparent;
+  color: #fff; }
+
+.btn-light span:hover {
+  color: #fff; }
+
+.container {
+  box-sizing: border-box;
+  border-radius: 0; }
+  .container .card {
+    min-height: 450px;
+    min-width: 300px;
+    box-sizing: border-box;
+    border-radius: 0; }
+  .container .card-1 {
+    background: #e38826;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; }
+    .container .card-1 .btn-1 {
+      color: #e38826;
+      align-self: start; }
+  .container .card-2 {
+    background: #006970; }
+    .container .card-2 .btn-2 {
+      color: #006970;
+      align-self: start; }
+  .container .card-3 {
+    background: #004241;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; }
+    .container .card-3 .btn-3 {
+      color: #004241;
+      display: inline;
+      align-self: start; }
+
+@media only screen and (max-width: 768px) {
+  .container .card-1, .container .card-2, .container .card-3 {
+    border-radius: 0; }
+  .container .card-1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
+  .container .card-3 {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
+  p {
+    margin-bottom: 1rem; } }
