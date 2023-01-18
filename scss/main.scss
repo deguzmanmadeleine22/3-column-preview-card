@@ -56,15 +56,18 @@ p {
 
 .btn-light:hover {
   background: transparent;
-  color: #fff;
+  span {
+    color: #fff;
+  }
 }
-.btn-light span:hover {
-  color: #fff;
-}
+
 
 .container {
   box-sizing: border-box;
   border-radius: 0;
+  a {
+    text-decoration: none;
+  }
   
   .card {
     min-height: 450px;
@@ -79,13 +82,20 @@ p {
     .btn-1 {
       color: $orange;
       align-self: start;
+      a {
+        color: $orange;
+      }
     }
+   
   }
   .card-2 {
     background: $d-cyan;
     .btn-2 {
       color: $d-cyan;
       align-self: start;
+      a {
+        color: $d-cyan;
+      }
     }
   }
   .card-3 {
@@ -96,14 +106,19 @@ p {
       color: $vd-cyan;
       display: inline;
       align-self: start;
+      a {
+        color: $vd-cyan;
+      }
     }
   }
  
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {    
+  
   .container .card-1, .container .card-2, .container .card-3 {
     border-radius: 0;
+    min-height: 400px !important;
   }
   .container .card-1 {
     border-top-left-radius: 10px;
@@ -115,5 +130,6 @@ p {
   }
   p {
     margin-bottom: 1rem;
+    padding-right: 0;
   }
 }

@@ -36,15 +36,15 @@ p {
   display: inline-block; }
 
 .btn-light:hover {
-  background: transparent;
-  color: #fff; }
-
-.btn-light span:hover {
-  color: #fff; }
+  background: transparent; }
+  .btn-light:hover span {
+    color: #fff; }
 
 .container {
   box-sizing: border-box;
   border-radius: 0; }
+  .container a {
+    text-decoration: none; }
   .container .card {
     min-height: 450px;
     min-width: 300px;
@@ -57,11 +57,15 @@ p {
     .container .card-1 .btn-1 {
       color: #e38826;
       align-self: start; }
+      .container .card-1 .btn-1 a {
+        color: #e38826; }
   .container .card-2 {
     background: #006970; }
     .container .card-2 .btn-2 {
       color: #006970;
       align-self: start; }
+      .container .card-2 .btn-2 a {
+        color: #006970; }
   .container .card-3 {
     background: #004241;
     border-top-right-radius: 10px;
@@ -70,10 +74,13 @@ p {
       color: #004241;
       display: inline;
       align-self: start; }
+      .container .card-3 .btn-3 a {
+        color: #004241; }
 
 @media only screen and (max-width: 768px) {
   .container .card-1, .container .card-2, .container .card-3 {
-    border-radius: 0; }
+    border-radius: 0;
+    min-height: 400px !important; }
   .container .card-1 {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px; }
@@ -81,4 +88,5 @@ p {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px; }
   p {
-    margin-bottom: 1rem; } }
+    margin-bottom: 1rem;
+    padding-right: 0; } }
